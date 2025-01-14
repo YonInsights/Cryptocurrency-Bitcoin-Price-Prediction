@@ -56,3 +56,18 @@ def plot_time_series_with_moving_averages(data, column, ma_columns, ma_styles, t
     plt.grid(alpha=0.3)
     plt.legend(fontsize=12)
     plt.show()
+def plot_predictions(plotting_data):
+    plt.figure(figsize=(15, 6))
+    plt.plot(plotting_data.index, plotting_data['Original'], label='Original', color='blue', linewidth=2)
+    plt.plot(plotting_data.index, plotting_data['Prediction'], label='Prediction', color='red', linewidth=2)
+    plt.title("Prediction vs Actual Close Price", fontsize=14)
+    plt.ylabel('Close Price', fontsize=14)
+    plt.xlabel('Year', fontsize=14)
+    plt.grid(alpha=0.3)
+    plt.legend(fontsize=14)
+    plt.show()
+
+
+
+
+
